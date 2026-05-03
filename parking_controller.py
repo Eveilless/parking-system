@@ -29,7 +29,7 @@ LOOP_TWO = 1
 BUTTON_TICKET = 2
 
 # Modbus parameters for output coils
-SLAVE_ID_OUTPUT = 2
+SLAVE_ID_OUTPUT = 1
 COIL_ADDRESS_OUTPUT = 0
 OUTPUT_COUNT = 4
 COIL_BARRIER_GATE = 0
@@ -71,8 +71,7 @@ class ParkingController:
 
         # --- UI ---
         self.main_widget = None
-        self.welcome_text = os.getenv(
-            "WELCOME_TEXT")
+        self.welcome_text = os.getenv("WELCOME_TEXT", "SELAMAT DATANG DI PARKING SYSTEM")
 
     def _setup_logging(self):
         """Initializes file-based rotating logging."""
